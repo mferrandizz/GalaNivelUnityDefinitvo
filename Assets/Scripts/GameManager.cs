@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     //private AudioManager audioManager;
     //private BackGroundManager backgroundManager;
 
-    public int vidas = 3;
+    public int vidas = 5;
 
     public void CharacterDead(GameObject character)
     {
         //Ha muerto nuestro personaje, sonara un sonido, pararemos el juego (StopBGM), cargaremos la escena de Game Over y destruiremos el personaje
         Debug.Log("Has muerto maja");
+        Destroy(character, 0.3f);
+        Time.timeScale = 0;
     }
 
     public void ZonaHit(GameObject zona)

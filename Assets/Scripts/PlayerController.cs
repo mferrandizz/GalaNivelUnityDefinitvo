@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gameManager;
 
+    [SerializeField] private bool isDamaged;
+    [SerializeField] private float damageTimer;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -152,14 +155,26 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundSensor.position, sensorRadius);
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerStay(Collider other) 
     {
         if(other.gameObject.tag == "Deadzone")
         {
-            Debug.Log("Has tocado la caja verde");
-            gameManager.ZonaHit(other.gameObject);
-            gameManager.RestarVida(this.gameObject);
-        }
-        
+            if(isDamaged)
+            {
+                Debug.Log("Has tocado la caja verde");
+                gameManager.ZonaHit(other.gameObject);
+                gameManager.RestarVida(this.gameObject);
+                isDamaged = false;
+            } else 
+            {
+                damageTimer -= Time.deltaTime;
+                if(damageTimer <= 0)
+                {
+                    isDamaged = true;
+                    damageTimer = 0.1f;
+                }
+            }
+        }    
     }
+    
 }
