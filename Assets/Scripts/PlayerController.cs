@@ -171,10 +171,18 @@ public class PlayerController : MonoBehaviour
                 if(damageTimer <= 0)
                 {
                     isDamaged = true;
-                    damageTimer = 0.1f;
+                    damageTimer = 0.5f;
                 }
             }
-        }    
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "DeadZoneCaida")
+        {
+            gameManager.CharacterDead(this.gameObject);
+        }
     }
     
 }

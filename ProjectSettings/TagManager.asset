@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Deadzone
+  - Disparo
+  - DeadZoneCaida
   layers:
   - Default
   - TransparentFX
