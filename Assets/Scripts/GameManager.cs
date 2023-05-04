@@ -8,22 +8,31 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    //private AudioManager audioManager;
-    //private BackGroundManager backgroundManager;
+    private AudioManager audioManager;
+    private BackgroundManager backgroundManager;
 
     public int vidas = 5;
+
+    void Awake()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        backgroundManager = GameObject.Find("BackGroundManager").GetComponent<BackgroundManager>();
+    }
 
     public void CharacterDead(GameObject character)
     {
         //Ha muerto nuestro personaje, sonara un sonido, pararemos el juego (StopBGM), cargaremos la escena de Game Over y destruiremos el personaje
         Debug.Log("Has muerto maja");
+        audioManager.GameOverSound();
+        backgroundManager.StopBGM();
         Destroy(character, 0.3f);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     public void ZonaHit(GameObject zona)
     {
         //Hemos impactado contra la zona peligrosa, hacemos la animacion de impacto y el sonido 
+        audioManager.LaserSound();
         Debug.Log("ouch (Anim y sonido)");
     }
 

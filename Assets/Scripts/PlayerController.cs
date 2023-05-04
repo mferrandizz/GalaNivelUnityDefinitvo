@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private float turnSmoothTime = 0.1f;
 
     private GameManager gameManager;
+    private AudioManager audioManager;
 
     [SerializeField] private bool isDamaged;
     [SerializeField] private float damageTimer;
@@ -49,8 +50,9 @@ public class PlayerController : MonoBehaviour
         //Asignamos la camara
         cam = Camera.main.transform;
 
-        //Asignamos el game manager
+        //Asignamos el game manager y el audiomanager
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
 
         //Con esto podemos esconder el icono del raton para que no moleste
         Cursor.lockState = CursorLockMode.Locked;
@@ -125,6 +127,9 @@ public class PlayerController : MonoBehaviour
             //ponemos la animacion de salto en true
             anim.SetBool("Salte", true);
             anim.SetBool("tocoSuelo", false);
+
+            //audio del salto
+            audioManager.JumpSound();
 
 
 
