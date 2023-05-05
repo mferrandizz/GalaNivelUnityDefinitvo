@@ -8,15 +8,22 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    private Animator anim;
+
     private AudioManager audioManager;
     private BackgroundManager backgroundManager;
 
     public int vidas = 5;
 
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Awake()
     {
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        backgroundManager = GameObject.Find("BackGroundManager").GetComponent<BackgroundManager>();
+        backgroundManager = GameObject.Find("BackgroundManager").GetComponent<BackgroundManager>();
     }
 
     public void CharacterDead(GameObject character)
@@ -25,6 +32,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Has muerto maja");
         audioManager.GameOverSound();
         backgroundManager.StopBGM();
+        anim.SetTrigger("isDeath");
         Destroy(character, 0.3f);
         //Time.timeScale = 0;
     }

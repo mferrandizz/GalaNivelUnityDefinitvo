@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private float jumpHeight = 1;
     [SerializeField]private float gravity = -9.81f;
     //Vector para aplicar la gravedad
-    private Vector3 playerVelocity;
+    [SerializeField] private Vector3 playerVelocity;
 
     [Header("Animaciones")]
     private Animator anim;
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
                 if(damageTimer <= 0)
                 {
                     isDamaged = true;
-                    damageTimer = 0.5f;
+                    damageTimer = 2f;
                 }
             }
         }
@@ -188,6 +188,11 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.CharacterDead(this.gameObject);
         }
+    }
+
+    void OnTriggerExit(Collider other) 
+    {
+        damageTimer = 0;
     }
     
 }
