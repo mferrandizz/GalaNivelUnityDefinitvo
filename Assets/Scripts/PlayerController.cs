@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         }
         else 
         {
-            anim.SetBool("Salte", true);
+            //anim.SetBool("Salte", true);
             anim.SetBool("tocoSuelo", false);
         }
 
