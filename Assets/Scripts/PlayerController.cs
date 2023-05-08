@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -187,6 +188,11 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "DeadZoneCaida")
         {
             gameManager.CharacterDead(this.gameObject);
+        }
+
+        if(other.gameObject.tag == "CargarCircuito")
+        {
+            SceneManager.LoadScene("CircuitoCoche");
         }
     }
 

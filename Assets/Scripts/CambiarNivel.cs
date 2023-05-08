@@ -9,4 +9,9 @@ public class CambiarNivel : MonoBehaviour
     {
         SceneManager.LoadScene(nombre);
     }
+
+    public void CargarCircuito()
+    {
+        SceneManager.LoadScene("CircuitoCoche");
+    }
 }
