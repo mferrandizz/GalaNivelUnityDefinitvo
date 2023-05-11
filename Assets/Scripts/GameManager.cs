@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
     private AudioManager audioManager;
     private BackgroundManager backgroundManager;
 
+
     public int vidas = 5;
+    public Text vidasText;
 
     void Start()
     {
@@ -49,6 +51,7 @@ public class GameManager : MonoBehaviour
         //Restamos vidas
         vidas--;
         Debug.Log(vidas);
+        vidasText.text = vidas.ToString();
 
         //Miramos si las vidas han llegado a 0 y en caso de que si el personaje se destruye
         if(vidas == 0)
