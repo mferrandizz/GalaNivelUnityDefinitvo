@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.08490741, g: 0.05522293, b: 0.025692582, a: 1}
+  m_IndirectSpecularColor: {r: 0.0849179, g: 0.05524546, b: 0.02570422, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -922,7 +922,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130039951}
-  m_LocalRotation: {x: 0.10672034, y: -0.7067182, z: 0.109175384, w: 0.69082624}
+  m_LocalRotation: {x: 0.10672033, y: -0.7067182, z: 0.10917538, w: 0.69082624}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1319,7 +1319,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288161058}
-  m_LocalRotation: {x: 0.061968956, y: -0.7122858, z: 0.06339451, w: 0.6962686}
+  m_LocalRotation: {x: 0.06196896, y: -0.7122858, z: 0.06339451, w: 0.6962686}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2617,7 +2617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572345553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.375, y: -0.64, z: 2.18}
+  m_LocalPosition: {x: 1.375, y: -0.64, z: 0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4563,16 +4563,16 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 20.156, y: 1.074, z: -71.659}
+      - m_Value: {x: 20.156, y: 1.074, z: -73.349}
         m_Name: Post1
         m_Overridden: 1
-      - m_Value: {x: 20.124, y: 0.974, z: -70.709}
+      - m_Value: {x: 20.124, y: 0.974, z: -69.179}
         m_Name: Post2
         m_Overridden: 1
-      - m_Value: {x: 20.07, y: 1.041, z: -69.49899}
+      - m_Value: {x: 20.07, y: 1.041, z: -71.148994}
         m_Name: Post3
         m_Overridden: 1
-      - m_Value: {x: 20.08, y: 0.914, z: -68.429}
+      - m_Value: {x: 20.08, y: 0.914, z: -66.239}
         m_Name: Post4
         m_Overridden: 1
     m_Vector4f:
@@ -5780,7 +5780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023696798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.343, y: -0.74, z: 3.13}
+  m_LocalPosition: {x: 1.343, y: -0.74, z: 4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12071,7 +12071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960814252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.299, y: -0.8, z: 5.41}
+  m_LocalPosition: {x: 1.299, y: -0.8, z: 7.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12143,7 +12143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973093831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.289, y: -0.673, z: 4.34}
+  m_LocalPosition: {x: 1.289, y: -0.673, z: 2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
