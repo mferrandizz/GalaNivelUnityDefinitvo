@@ -16,11 +16,6 @@ public class Disparo : MonoBehaviour
         audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
-    void Start()
-    {
-        //audioManager.turretShotSFX();
-    }
-
     void Update()
     {
         transform.position += transform.forward * fuerzaDisp * Time.deltaTime;
@@ -31,7 +26,7 @@ public class Disparo : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Debug.Log("Te ha dado un disparo de torreta");
-            //audioManager.impactShotSFX();
+            audioManager.ShotHitSound();
             
             gameManager.RestarVida(this.gameObject);
         }

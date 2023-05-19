@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0849179, g: 0.05524546, b: 0.02570422, a: 1}
+  m_IndirectSpecularColor: {r: 0.08491504, g: 0.05524224, b: 0.025703415, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -922,7 +922,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130039951}
-  m_LocalRotation: {x: 0.10672033, y: -0.7067182, z: 0.10917538, w: 0.69082624}
+  m_LocalRotation: {x: 0.10672034, y: -0.7067182, z: 0.109175384, w: 0.69082624}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1849,6 +1849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 5
   vidasText: {fileID: 619793579}
+  isGameOver: 0
 --- !u!4 &425730037
 Transform:
   m_ObjectHideFlags: 0
@@ -7147,8 +7148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSFX: {fileID: 8300000, guid: a0322d13e972bf343a64b875d6bba6c6, type: 3}
-  laserSFX: {fileID: 8300000, guid: 0d1d6287cb602604382701c7de24d9ae, type: 3}
-  turretShotSFX: {fileID: 0}
+  laserSFX: {fileID: 8300000, guid: 521330b576053034bb15eee55c9ec2b4, type: 3}
+  turretShotSFX: {fileID: 8300000, guid: 0d1d6287cb602604382701c7de24d9ae, type: 3}
   impactShotSFX: {fileID: 0}
   deathSFX: {fileID: 8300000, guid: 6849693a3d4bff34d92221662732d5ee, type: 3}
 --- !u!82 &1245204425
@@ -7161,8 +7162,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c85cbcc7dd0a2b0499aa32d384626ad2, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11425,7 +11426,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c85cbcc7dd0a2b0499aa32d384626ad2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

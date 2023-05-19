@@ -6,6 +6,7 @@ public class TurretController : MonoBehaviour
 {
 
     private GameObject _Player;
+    private AudioManager audioManager;
     public float dist;
     public float howClose;
     public Transform head;
@@ -19,6 +20,11 @@ public class TurretController : MonoBehaviour
     void Start()
     {
         _Player = GameObject.Find("/Player/GalaMinia2reotravez/LookAtTorreta");
+    }
+
+    void Awake()
+    {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class TurretController : MonoBehaviour
     {
         GameObject bala =  PoolManager.Instance.GetPooledObjects(ammo, head.position, head.rotation);             //Instantiate(proyectil, shootPos.position, head.rotation);
         bala.SetActive(true);
+        audioManager.TurretShotSound();
         //bala.GetComponent<Rigidbody>().AddForce(head.forward * fuerzaDisp);
         //Destroy(bala, 10);
     }

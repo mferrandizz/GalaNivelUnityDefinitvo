@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
 
     public int vidas = 5;
     public Text vidasText;
+    public bool isGameOver = false;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GameObject.Find("Player").GetComponent<Animator>();
     }
 
     void Awake()
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
         audioManager.GameOverSound();
         backgroundManager.StopBGM();
         anim.SetTrigger("isDeath");
-        Destroy(character, 0.3f);
+        isGameOver = true;
+        //Destroy(character, 1f);
         //Time.timeScale = 0;
     }
 
@@ -48,18 +50,21 @@ public class GameManager : MonoBehaviour
 
     public void RestarVida(GameObject character)
     {
-        //Restamos vidas
-        vidas--;
-        Debug.Log(vidas);
-        vidasText.text = vidas.ToString();
-
-        //Miramos si las vidas han llegado a 0 y en caso de que si el personaje se destruye
-        if(vidas == 0)
+        if(isGameOver == false)
         {
-            CharacterDead(character);
+            //Restamos vidas
+            vidas--;
+            Debug.Log(vidas);
+            vidasText.text = vidas.ToString();
+            anim.SetTrigger("isDamaged");
 
+            //Miramos si las vidas han llegado a 0 y en caso de que si el personaje se destruye
+            if(vidas == 0)
+            {
+                CharacterDead(character);
+
+            }
         }
-
     }
     
 

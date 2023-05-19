@@ -62,12 +62,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(gameManager.isGameOver == false)
+        {
         //Llamamos la funcion de movimiento
         Movement();
             
         //Lamamaos la funcion de salto
         Jump();
-
+        }
     }
 
     //Movimiento TPS con Freelook camera
@@ -141,7 +144,7 @@ public class PlayerController : MonoBehaviour
         }
         else 
         {
-            //anim.SetBool("Salte", true);
+            anim.SetBool("Salte", true);
             anim.SetBool("tocoSuelo", false);
         }
 
