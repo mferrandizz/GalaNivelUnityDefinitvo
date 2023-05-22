@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour
         {
             if(isDamaged)
             {
-                Debug.Log("Has tocado la caja verde");
+                //Debug.Log("Has tocado la caja verde");
                 gameManager.ZonaHit(other.gameObject);
                 gameManager.RestarVida(this.gameObject);
                 isDamaged = false;

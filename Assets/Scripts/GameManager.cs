@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public void CharacterDead(GameObject character)
     {
         //Ha muerto nuestro personaje, sonara un sonido, pararemos el juego (StopBGM), cargaremos la escena de Game Over y destruiremos el personaje
-        Debug.Log("Has muerto maja");
+        //Debug.Log("Has muerto maja");
         audioManager.GameOverSound();
         backgroundManager.StopBGM();
         anim.SetTrigger("isDeath");
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         //Hemos impactado contra la zona peligrosa, hacemos la animacion de impacto y el sonido 
         audioManager.LaserSound();
-        Debug.Log("ouch (Anim y sonido)");
+        //Debug.Log("ouch (Anim y sonido)");
     }
 
     public void RestarVida(GameObject character)

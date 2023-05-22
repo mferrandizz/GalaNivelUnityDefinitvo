@@ -3,7 +3,62 @@ guid: 2d516e6eb3e74e04486668b91dfa90aa
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Aler\xF3n"
+    second: {fileID: 2100000, guid: 2c68128dd51a880479823d672bc1f4fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coche
+    second: {fileID: 2100000, guid: f6bacdf6f8ba0174598abe4886bc14c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cristales
+    second: {fileID: 2100000, guid: 991d97788de50ce4f9ec045e32d9dfba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Laterales
+    second: {fileID: 2100000, guid: a5d92a3f160a1904498f588311dd317b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luces Abajo Atras
+    second: {fileID: 2100000, guid: 27ddfcd56a8ae854184c8ee4200c2de9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luces Atras
+    second: {fileID: 2100000, guid: ea48dc83e61820243b9be578c71f2b33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luces Delante
+    second: {fileID: 2100000, guid: ba22ab1eb998e5c42b8b92fad9b39a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.160
+    second: {fileID: 2100000, guid: b15daf9dc4a5beb43bd0b6fd9964108f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parte Delantera
+    second: {fileID: 2100000, guid: 0ffc69f0acfa9c44bb3d35dc7d18d491, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parte Superior
+    second: {fileID: 2100000, guid: 5941fecb5f2dd2040a5d1c93480b5d56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Respiradores
+    second: {fileID: 2100000, guid: d865035445516a24081db5674e85ce0a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
