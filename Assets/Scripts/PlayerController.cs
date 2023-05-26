@@ -38,9 +38,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isDamaged;
     [SerializeField] private float damageTimer;
 
+    public GameObject menuGameOver;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        isDamaged = true;
     }
     
     // Start is called before the first frame update
@@ -115,10 +118,10 @@ public class PlayerController : MonoBehaviour
 
         //Si estamos en el suelo y playervelocity es menor que 0 hacemos que le vuelva a poner el valor a 0
         //esto es para evitar que siga aplicando fuerza de gravedad cuando estemos en el suelo y evitar comportamientos extraños
-        if(isGrounded && playerVelocity.y < 0)
+        /*if(isGrounded && playerVelocity.y < 0)
         {
             playerVelocity.y = 0;
-        }
+        }*/
 
         //si estamos en el suelo y pulasamos el imput de salto hacemos que salte el personaje
         if(isGrounded && Input.GetButtonDown("Jump"))
@@ -166,21 +169,26 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay(Collider other) 
     {
-        if(other.gameObject.tag == "Deadzone")
+        if(gameManager.isGameOver == false)
         {
-            if(isDamaged)
+            if(other.gameObject.tag == "Deadzone")
             {
-                //Debug.Log("Has tocado la caja verde");
-                gameManager.ZonaHit(other.gameObject);
-                gameManager.RestarVida(this.gameObject);
-                isDamaged = false;
-            } else 
-            {
-                damageTimer -= Time.deltaTime;
-                if(damageTimer <= 0)
+                if(isDamaged)
                 {
-                    isDamaged = true;
+                    //Debug.Log("Has tocado la caja verde");
+                    gameManager.ZonaHit(other.gameObject);
+                    gameManager.RestarVida(this.gameObject);
                     damageTimer = 2f;
+                    isDamaged = false;
+
+                } else 
+                {
+                    damageTimer -= Time.deltaTime;
+                    if(damageTimer <= 0)
+                    {
+                        isDamaged = true;
+                        damageTimer = 2f;
+                    }
                 }
             }
         }
@@ -202,6 +210,12 @@ public class PlayerController : MonoBehaviour
     void OnTriggerExit(Collider other) 
     {
         damageTimer = 0;
+    }
+
+    void MenuGameOver()
+    {
+        menuGameOver.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
     
 }

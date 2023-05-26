@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 6348666919071722031}
   - component: {fileID: 6348666919071722024}
   - component: {fileID: 6348666919071722025}
-  - component: {fileID: 6348666919071722030}
   m_Layer: 0
   m_Name: Laser1
   m_TagString: Untagged
@@ -129,20 +128,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6348666919071722030
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6348666919071722028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6348666919281934001
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +175,6 @@ GameObject:
   - component: {fileID: 6348666920201854236}
   - component: {fileID: 6348666920201854233}
   - component: {fileID: 6348666920201854238}
-  - component: {fileID: 6348666920201854239}
   m_Layer: 0
   m_Name: Laser1 (1)
   m_TagString: Untagged
@@ -263,20 +247,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6348666920201854239
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6348666920201854237}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1001 &367810251887261146
 PrefabInstance:
   m_ObjectHideFlags: 0

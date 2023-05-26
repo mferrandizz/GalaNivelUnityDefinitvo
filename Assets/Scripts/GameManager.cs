@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int vidas = 5;
     public Text vidasText;
     public bool isGameOver = false;
+    
 
     void Start()
     {
@@ -66,7 +67,5 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
-
 
 }
