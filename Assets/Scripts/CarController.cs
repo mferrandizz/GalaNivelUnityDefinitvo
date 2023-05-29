@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CarController : MonoBehaviour
 {
@@ -28,19 +30,36 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    [SerializeField] public TextMeshProUGUI lapText;
+    [SerializeField] private int LapsDone;
+
+    private GameTimerManager gameTimeManager;
+
+    public bool isGameWon = false;
+    public GameObject menuGameWin;
+
+
+    private void Awake()
+    {
+        gameTimeManager = GameObject.Find("GameTimerManager").GetComponent<GameTimerManager>();
+    }
+
     private void FixedUpdate()
     {
-        GetInput();
-        HandleMotor();
-        HandleSteering();
-        UpdateWheels();
+        if(gameTimeManager.isGameOver == false && isGameWon == false)
+        {
+            GetInput();
+            HandleMotor();
+            HandleSteering();
+            UpdateWheels();
+        }
     }
 
     private void GetInput()
     {
         horizontalInput = Input.GetAxis(HORIZONTAL);
         verticalInput = Input.GetAxis(VERTICAL);
-        isBreaking = Input.GetKey(KeyCode.Space);
+        //isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
@@ -85,6 +104,26 @@ public class CarController : MonoBehaviour
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "FinishLine")
+        {
+            LapsDone += 1;
+            lapText.text = LapsDone.ToString();
+            GameWinning();
+        }
+    }
+
+    void GameWinning()
+    {
+        if(LapsDone == 3)
+        {
+            isGameWon = true;
+            menuGameWin.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
 
