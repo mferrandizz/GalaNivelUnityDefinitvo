@@ -14,4 +14,9 @@ public class CambiarNivel : MonoBehaviour
     {
         SceneManager.LoadScene("CircuitoCoche");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

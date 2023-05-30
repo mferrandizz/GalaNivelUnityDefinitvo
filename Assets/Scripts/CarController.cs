@@ -34,6 +34,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private int LapsDone;
 
     private GameTimerManager gameTimeManager;
+    private AudioManager audioManager;
+    private BackgroundManager backgroundManager;
 
     public bool isGameWon = false;
     public GameObject menuGameWin;
@@ -42,6 +44,8 @@ public class CarController : MonoBehaviour
     private void Awake()
     {
         gameTimeManager = GameObject.Find("GameTimerManager").GetComponent<GameTimerManager>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        backgroundManager = GameObject.Find("BackgroundManager").GetComponent<BackgroundManager>();
     }
 
     private void FixedUpdate()
@@ -121,6 +125,8 @@ public class CarController : MonoBehaviour
         if(LapsDone == 3)
         {
             isGameWon = true;
+            backgroundManager.StopBGM();
+            audioManager.YouWinSound();
             menuGameWin.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }

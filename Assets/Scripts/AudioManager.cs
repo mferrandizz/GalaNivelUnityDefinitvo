@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip turretShotSFX;
     public AudioClip impactShotSFX;
     public AudioClip deathSFX;
+    public AudioClip youWinSFX;
 
 
 
@@ -42,6 +43,11 @@ public class AudioManager : MonoBehaviour
     public void GameOverSound()
     {
         _audiosource.PlayOneShot(deathSFX);
+    } 
+
+    public void YouWinSound()
+    {
+        _audiosource.PlayOneShot(youWinSFX);
     } 
 
 }
